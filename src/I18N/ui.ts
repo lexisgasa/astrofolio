@@ -19,6 +19,7 @@ export const ui = {
     "hero.cv": "Descargar CV",
     "hero.contact": "Contactar",
     "hero.imageAlt": "Foto de perfil de Alexis Garcia",
+    "footer.rights": "Todos los derechos reservados.",
   },
   en: {
     "nav.about": "About",
@@ -32,6 +33,7 @@ export const ui = {
     "hero.cv": "Download Resume",
     "hero.contact": "Contact Me",
     "hero.imageAlt": "Alexis Garcia Profile Picture",
+    "footer.rights": "All rights reserved.",
   },
   ja: {
     "nav.about": "私について",
@@ -45,5 +47,6 @@ export const ui = {
     "hero.cv": "履歴書をダウンロード",
     "hero.contact": "お問い合わせ",
     "hero.imageAlt": "アレクシス・ガルシアのプロフィール写真",
+    "footer.rights": "全著作権所有.",
   },
 } as const;
