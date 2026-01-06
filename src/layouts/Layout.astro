@@ -1,13 +1,15 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { ui } from "../I18N/ui";
 import "../styles/global.css";
 
 interface Props {
   title: string;
-  lang?: string;
+  lang: keyof typeof ui;
 }
 
-const { title, lang = "es" } = Astro.props;
+const { title, lang } = Astro.props;
 ---
 
 <!doctype html>
@@ -33,11 +35,14 @@ const { title, lang = "es" } = Astro.props;
     </script>
   </head>
   <body
-    class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300"
+    class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 flex flex-col min-h-screen"
   >
-    <Navbar />
-    <main class="w-full">
+    <Navbar lang={lang} />
+
+    <main class="w-full grow">
       <slot />
     </main>
+
+    <Footer lang={lang} />
   </body>
 </html>

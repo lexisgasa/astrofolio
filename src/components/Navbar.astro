@@ -1,23 +1,32 @@
 ---
+import { languages, ui, defaultLang } from "../I18N/ui";
+import { useTranslations } from "../I18N/utils";
+
+interface Props {
+  lang: keyof typeof ui;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
 const navItems = [
-  { name: "Sobre mi", href: "/#top" },
-  { name: "Skills", href: "/#skills" },
-  { name: "Experiencia", href: "/#experiencia" },
-  { name: "Proyectos", href: "/#proyectos" },
-  { name: "Blog", href: "/blog" },
-  { name: "Contacto", href: "/#contacto" },
+  { name: t("nav.about"), href: "#about-me" },
+  { name: t("nav.skills"), href: "#skills" },
+  { name: t("nav.experience"), href: "#experiencia" },
+  { name: t("nav.projects"), href: "#proyectos" },
+  { name: t("nav.contact"), href: "#contacto" },
 ];
 ---
 
 <header
-  class="sticky top-0 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xs"
+  class="sticky top-0 z-1 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xs"
 >
   <div class="wrapper flex h-16 items-center justify-between">
     <a
-      href="/"
+      href={`/${lang}`}
       class="text-xl font-bold tracking-tight hover:text-blue-600 dark:hover:text-blue-400 transition"
     >
-      Mi<span class="text-blue-600 dark:text-blue-400">Portfolio</span>.
+      Alexis<span class="text-blue-600 dark:text-blue-400"> García</span>.
     </a>
 
     <nav class="hidden md:flex gap-6">
@@ -33,12 +42,36 @@ const navItems = [
       }
     </nav>
 
-    <div class="flex items-center gap-4">
-      <button
-        class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:opacity-80"
-      >
-        ES ▼
-      </button>
+    <div class="flex items-center gap-4 relative group">
+      <div class="relative group">
+        <button
+          class="flex items-center gap-1 text-sm font-medium text-slate-600 dark:text-slate-300 hover:opacity-80"
+          aria-haspopup="true"
+        >
+          {lang.toUpperCase()} ▼
+        </button>
+
+        <div
+          class="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out"
+        >
+          <ul
+            class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg shadow-lg py-1 w-24 overflow-hidden"
+          >
+            {
+              Object.entries(languages).map(([key, label]) => (
+                <li>
+                  <a
+                    href={`/${key}/`}
+                    class={`block px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 ${key === lang ? "font-bold text-blue-600 dark:text-blue-400" : "text-slate-600 dark:text-slate-300"}`}
+                  >
+                    {label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
 
       <button
         id="theme-toggle"
