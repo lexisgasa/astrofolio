@@ -3,61 +3,14 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Skills from "../components/Skills.astro";
 import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Alexis Garcia - Portfolio">
   <Hero />
   <Skills />
   <Experience />
-
-  <section id="proyectos" class="section-py bg-slate-50 dark:bg-slate-900/50">
-    <div class="wrapper">
-      <h2 class="section-title">Proyectos</h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div
-          class="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-md border border-slate-200 dark:border-slate-700"
-        >
-          <h3 class="text-xl font-bold mb-2">Proyecto Uno</h3>
-          <p class="text-slate-600 dark:text-slate-400 mb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
-            porro quisquam voluptatum et inventore, magnam eaque praesentium eum
-            reiciendis deleniti error assumenda rem cumque quidem autem beatae
-            ratione vitae veritatis?
-          </p>
-          <div class="flex gap-2 text-xs">
-            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded"
-              >Astro</span
-            >
-            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded"
-              >Tailwind</span
-            >
-          </div>
-        </div>
-
-        <div
-          class="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-md border border-slate-200 dark:border-slate-700"
-        >
-          <h3 class="text-xl font-bold mb-2">Proyecto Dos</h3>
-          <p class="text-slate-600 dark:text-slate-400 mb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            hic cupiditate nesciunt officia dicta numquam, vel sunt enim!
-            Asperiores ab saepe quia ipsum, sint aspernatur quos quod voluptate
-            deserunt distinctio.
-          </p>
-          <div class="flex gap-2 text-xs">
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded"
-              >Node.js</span
-            >
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded"
-              >MongoDB</span
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <Projects />
   <section id="contacto" class="section-py">
     <div class="wrapper">
       <h2 class="section-title">Contacto</h2>
