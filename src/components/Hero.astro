@@ -1,29 +1,53 @@
 ---
 import { Image } from "astro:assets";
 import meImage from "../assets/me.webp";
+import { useTranslations } from "../I18N/utils";
+import { ui } from "../I18N/ui";
+
+interface Props {
+  lang: keyof typeof ui;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const cvFile =
+  lang === "es" ? "/AlexisGarcia_cv_es.pdf" : "/AlexisGarcia_cv_en.pdf";
+
+const typedStrings = {
+  es: ["Alexis Garcia", "Desarrollador", "Ingeniero de Software"],
+  en: ["Alexis Garcia", "Developer", "Software Engineer"],
+  ja: ["アレクシス・ガルシア", "開発者", "ソフトウェアエンジニア"],
+};
+
+const currentStrings = typedStrings[lang] || typedStrings.es;
 ---
 
 <section id="about-me" class="section-py md:py-32">
   <div class="wrapper">
     <div class="flex flex-col-reverse md:flex-row items-center gap-10">
       <div class="flex-1 text-center md:text-left">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
-          Hola, soy <br class="hidden md:block" />
-          <span class="text-accent typed-text"></span>
+        <h1 class="text-4xl font-extrabold mb-6 tracking-tight">
+          {t("hero.title")}
+          <br class="hidden md:block" />
+          <span
+            class="text-accent typed-text"
+            data-strings={JSON.stringify(currentStrings)}></span>
         </h1>
 
         <p
-          class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-lg mx-auto md:mx-0"
+          class="text-md text-slate-600 dark:text-slate-400 mb-8 max-w-lg mx-auto md:mx-0"
         >
-          Ingeniero de Software especializado en Frontend. Creo experiencias
-          digitales fluidas, accesibles y minimalistas.
+          {t("hero.subtitle")}
         </p>
 
         <div class="flex justify-center md:justify-start gap-4">
-          <a href="/cv_es.pdf" target="_blank" class="btn-primary"
-            >Descargar CV</a
-          >
-          <a href="#contacto" class="btn-secondary">Contactar</a>
+          <a href={cvFile} target="_blank" class="btn-primary">
+            {t("hero.cv")}
+          </a>
+          <a href="#contacto" class="btn-secondary">
+            {t("hero.contact")}
+          </a>
         </div>
       </div>
 
@@ -38,7 +62,7 @@ import meImage from "../assets/me.webp";
         >
           <Image
             src={meImage}
-            alt="Alexis Garcia Foto de Perfil"
+            alt={t("hero.imageAlt")}
             class="w-full h-full object-cover"
             loading="eager"
           />
@@ -50,10 +74,15 @@ import meImage from "../assets/me.webp";
 
 <script>
   import Typed from "typed.js";
+
   const element = document.querySelector(".typed-text");
-  if (element) {
+
+  if (element && element instanceof HTMLElement) {
+    const stringsData = element.dataset.strings;
+    const strings = stringsData ? JSON.parse(stringsData) : ["Alexis Garcia"];
+
     new Typed(element, {
-      strings: ["Alexis Garcia", "Desarrollador", "Frontend Dev"],
+      strings: strings,
       typeSpeed: 50,
       backSpeed: 30,
       backDelay: 1500,
