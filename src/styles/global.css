@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @layer components {
   .wrapper {
     @apply max-w-5xl mx-auto px-4;

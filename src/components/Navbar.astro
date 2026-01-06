@@ -42,12 +42,26 @@ const navItems = [
 
       <button
         id="theme-toggle"
-        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
         aria-label="Cambiar tema"
       >
         <span class="hidden dark:inline">🌞</span>
         <span class="inline dark:hidden">🌙</span>
       </button>
     </div>
+
+    <script>
+      const themeToggleBtn = document.getElementById("theme-toggle");
+
+      themeToggleBtn?.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+
+        if (document.documentElement.classList.contains("dark")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+        }
+      });
+    </script>
   </div>
 </header>
