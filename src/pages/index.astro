@@ -1,44 +1,14 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Skills from "../components/Skills.astro";
-import Layout from "../layouts/Layout.astro";
+import Experience from "../components/Experience.astro";
 ---
 
 <Layout title="Alexis Garcia - Portfolio">
   <Hero />
-
   <Skills />
-
-  <section id="experiencia" class="section-py">
-    <div class="wrapper">
-      <h2 class="section-title">Experiencia Laboral</h2>
-
-      <div class="max-w-3xl mx-auto space-y-8">
-        <div class="border-l-4 border-blue-600 pl-6 py-2">
-          <h3 class="text-xl font-bold">Ingeniero de sofware</h3>
-          <span class="text-sm text-slate-500">i2CAT • 2025 - Presente</span>
-          <p class="mt-2 text-slate-600 dark:text-slate-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            beatae assumenda dolore laborum odio fugit repudiandae, dignissimos
-            culpa quo! Nihil reiciendis quod molestias, error accusantium
-            suscipit consectetur nulla aperiam cupiditate!
-          </p>
-        </div>
-        <div
-          class="border-l-4 border-slate-300 dark:border-slate-700 pl-6 py-2"
-        >
-          <h3 class="text-xl font-bold">Desarrollador frontend</h3>
-          <span class="text-sm text-slate-500">Netquest • 2022 - 2024</span>
-          <p class="mt-2 text-slate-600 dark:text-slate-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui at
-            similique ab est ea inventore vero totam consectetur cupiditate,
-            reprehenderit error, nesciunt maxime adipisci perspiciatis odio
-            quisquam sit doloribus possimus?
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Experience />
 
   <section id="proyectos" class="section-py bg-slate-50 dark:bg-slate-900/50">
     <div class="wrapper">
