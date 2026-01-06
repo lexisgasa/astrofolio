@@ -4,6 +4,7 @@ import Hero from "../components/Hero.astro";
 import Skills from "../components/Skills.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout title="Alexis Garcia - Portfolio">
@@ -11,23 +12,5 @@ import Projects from "../components/Projects.astro";
   <Skills />
   <Experience />
   <Projects />
-  <section id="contacto" class="section-py">
-    <div class="wrapper">
-      <h2 class="section-title">Contacto</h2>
-      <div class="text-center">
-        <p class="text-xl text-slate-600 dark:text-slate-400 mb-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-          laudantium atque labore inventore explicabo! Est fugiat, magni odio
-          quas tempora voluptatem, suscipit nesciunt cum assumenda vitae
-          consequatur, facere eius ipsam.
-        </p>
-        <a
-          href="mailto:@email.com"
-          class="inline-block bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-4 rounded-lg font-bold hover:opacity-90 transition"
-        >
-          Envíame un mensaje
-        </a>
-      </div>
-    </div>
-  </section>
+  <Contact />
 </Layout>
