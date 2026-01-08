@@ -1,17 +1,27 @@
 ---
+import { useTranslations } from "../I18N/utils";
+import { ui } from "../I18N/ui";
 
+interface Props {
+  lang: keyof typeof ui;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const email = "lexisgasa3007@gmail.com";
 ---
 
 <section id="contacto" class="section-py">
   <div class="wrapper">
-    <h2 class="section-title">Hablemos</h2>
+    <h2 class="section-title">{t("contact.title")}</h2>
     <div class="text-center max-w-2xl mx-auto">
-      <p class="text-xl text-muted mb-8">
-        Estoy siempre abierto a discutir nuevos proyectos, ideas creativas u
-        oportunidades de ser parte de tus visiones.
+      <p class="text-xl text-muted mb-8 text-balance">
+        {t("contact.text")}
       </p>
-      <a href="mailto:tu@email.com" class="inline-block btn-primary">
-        Envíame un mensaje
+
+      <a href={`mailto:${email}`} class="inline-block btn-primary">
+        {t("contact.btn")}
       </a>
     </div>
   </div>

@@ -24,6 +24,10 @@ export const ui = {
     "projects.title": "Proyectos Destacados",
     "projects.code": "Código",
     "projects.demo": "Demo",
+    "contact.title": "Hablemos",
+    "contact.text":
+      "Estoy siempre abierto a discutir nuevos proyectos, ideas creativas u oportunidades de ser parte de tus visiones.",
+    "contact.btn": "Envíame un mensaje",
     "footer.rights": "Todos los derechos reservados.",
   },
   en: {
@@ -43,6 +47,10 @@ export const ui = {
     "projects.title": "Featured Projects",
     "projects.code": "Code",
     "projects.demo": "Demo",
+    "contact.title": "Let's Talk",
+    "contact.text":
+      "I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
+    "contact.btn": "Send me a message",
     "footer.rights": "All rights reserved.",
   },
   ja: {
@@ -62,6 +70,10 @@ export const ui = {
     "projects.title": "主なプロジェクト",
     "projects.code": "コード",
     "projects.demo": "デモ",
+    "contact.title": "お問い合わせ",
+    "contact.text":
+      "新しいプロジェクトや創造的なアイデア、ビジョンの実現に向けた協力について、いつでもご相談ください。",
+    "contact.btn": "メッセージを送る",
     "footer.rights": "全著作権所有.",
   },
 } as const;
