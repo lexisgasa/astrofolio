@@ -1,25 +1,21 @@
 ---
-const jobs = [
-  {
-    role: "Ingeniero de Software",
-    company: "i2CAT",
-    date: "2025 - Presente",
-    description:
-      "Desarrollo e implementación de soluciones tecnológicas avanzadas...",
-  },
-  {
-    role: "Desarrollador Frontend",
-    company: "Netquest",
-    date: "2022 - 2024",
-    description:
-      "Mantenimiento y creación de nuevas funcionalidades para paneles de encuestas...",
-  },
-];
+import { useTranslations } from "../I18N/utils";
+import { ui } from "../I18N/ui";
+import { jobsData } from "../I18N/ui.jobs";
+
+interface Props {
+  lang: keyof typeof ui;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const jobs = jobsData[lang] || jobsData.es;
 ---
 
 <section id="experiencia" class="section-py">
   <div class="wrapper">
-    <h2 class="section-title">Experiencia Laboral</h2>
+    <h2 class="section-title">{t("experience.title")}</h2>
 
     <div class="max-w-3xl mx-auto">
       {
@@ -40,7 +36,7 @@ const jobs = [
               {job.company}
             </div>
 
-            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-balance">
               {job.description}
             </p>
           </div>
