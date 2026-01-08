@@ -1,0 +1,7 @@
+services:
+  astrofolio:
+    build: .
+    container_name: astrofolio
+    ports:
+      - "8080:80"
+    restart: always

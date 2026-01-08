@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { ui } from "../../I18N/ui";
+import { useTranslations } from "../../I18N/utils";
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: "es" } },
+    { params: { lang: "en" } },
+    { params: { lang: "ja" } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: keyof typeof ui };
+const t = useTranslations(lang);
+
+const title = `404 - ${lang === "ja" ? "ページが見つかりません" : "Not Found"}`;
+---
+
+<Layout title={title} lang={lang}>
+  <div
+    class="flex flex-col items-center justify-center min-h-[60vh] text-center px-4"
+  >
+    <h1
+      class="text-9xl font-bold text-slate-800 dark:text-slate-200 select-none mb-4"
+    >
+      404
+    </h1>
+
+    <h2 class="text-3xl font-bold mb-4 text-slate-900 dark:text-white">
+      {lang === "es" && "Página no encontrada"}
+      {lang === "en" && "Page not found"}
+      {lang === "ja" && "ページが見つかりません"}
+    </h2>
+
+    <p class="text-muted mb-8 text-lg max-w-md mx-auto">
+      {lang === "es" && "La página que buscas no existe."}
+      {lang === "en" && "Sorry, the page you are looking for does not exist."}
+      {lang === "ja" && "お探しのページは存在しません。"}
+    </p>
+
+    <a href={`/${lang}/`} class="btn-primary">
+      {lang === "es" && "Volver al inicio"}
+      {lang === "en" && "Go Home"}
+      {lang === "ja" && "ホームに戻る"}
+    </a>
+  </div>
+</Layout>
