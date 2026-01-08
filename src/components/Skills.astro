@@ -1,31 +1,21 @@
 ---
-const skills = [
-  {
-    category: "Frontend",
-    items: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Astro",
-      "Tailwind CSS",
-    ],
-  },
-  {
-    category: "Backend & Base de datos",
-    items: ["Node.js", "Express", "MongoDB", "SQL"],
-  },
-  {
-    category: "Herramientas & Otros",
-    items: ["Git / GitHub", "Docker", "Figma", "Scrum / Agile"],
-  },
-];
+import { useTranslations } from "../I18N/utils";
+import { ui } from "../I18N/ui";
+import { skillsData } from "../I18N/ui.skills";
+
+interface Props {
+  lang: keyof typeof ui;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const skills = skillsData[lang] || skillsData.es;
 ---
 
 <section id="skills" class="section-py bg-slate-50 dark:bg-slate-900/50">
   <div class="wrapper">
-    <h2 class="section-title">Mis Habilidades</h2>
+    <h2 class="section-title">{t("skills.title")}</h2>
 
     <div class="space-y-12">
       {
@@ -36,7 +26,7 @@ const skills = [
             </h3>
             <div class="flex flex-wrap justify-center gap-4">
               {group.items.map((item) => (
-                <span class="tag hover:scale-105 transition-transform cursor-default">
+                <span class="tag hover:scale-105 transition-transform cursor-default select-none">
                   {item}
                 </span>
               ))}
