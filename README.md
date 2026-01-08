@@ -96,6 +96,6 @@ This portfolio is currently under active development. Here are the features plan
 - [ ] **Accessibility:** Audit and improve ARIA labels and style following the [WCAG](https://www.w3.org/TR/WCAG21/)
 - [ ] **Projects Section:** Create and update this section with a pure backend and full-stack projects.
 - [ ] **Blog:** Integration of a Markdown-based blog.
-- [ ] **WIP** Update ES/EN/JA readme.
+- [ ] **WIP** Update ES/EN/JA readme and improve PSI.
 
 ---

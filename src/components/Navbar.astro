@@ -19,7 +19,7 @@ const navItems = [
 ---
 
 <header
-  class="sticky top-0 z-1 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xs"
+  class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xs"
 >
   <div class="wrapper flex h-16 items-center justify-between">
     <a
@@ -42,17 +42,20 @@ const navItems = [
       }
     </nav>
 
-    <div class="flex items-center gap-4 relative group">
-      <div class="relative group">
+    <div class="flex items-center gap-4">
+      <div class="relative">
         <button
-          class="flex items-center gap-1 text-sm font-medium text-slate-600 dark:text-slate-300 hover:opacity-80"
+          id="lang-toggle-btn"
+          class="flex items-center gap-1 text-sm font-medium text-slate-600 dark:text-slate-300 hover:opacity-80 transition-colors"
           aria-haspopup="true"
+          aria-expanded="false"
         >
           {lang.toUpperCase()} ▼
         </button>
 
         <div
-          class="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out"
+          id="lang-dropdown"
+          class="hidden absolute right-0 top-full pt-2 z-50"
         >
           <ul
             class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg shadow-lg py-1 w-24 overflow-hidden"
@@ -124,8 +127,8 @@ const navItems = [
 </header>
 
 <script>
-  const themeToggleBtn = document.getElementById("theme-toggle");
-  themeToggleBtn?.addEventListener("click", () => {
+  const themeToggleButton = document.getElementById("theme-toggle");
+  themeToggleButton?.addEventListener("click", () => {
     document.documentElement.classList.toggle("dark");
     if (document.documentElement.classList.contains("dark")) {
       localStorage.setItem("theme", "dark");
@@ -134,12 +137,27 @@ const navItems = [
     }
   });
 
-  const menuBtn = document.getElementById("menu-btn");
+  const menuButton = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
+  const languageButton = document.getElementById("lang-toggle-btn");
+  const languageDropdown = document.getElementById("lang-dropdown");
 
-  menuBtn?.addEventListener("click", (e) => {
+  menuButton?.addEventListener("click", (e) => {
     e.stopPropagation();
     mobileMenu?.classList.toggle("hidden");
+
+    languageDropdown?.classList.add("hidden");
+    languageButton?.setAttribute("aria-expanded", "false");
+  });
+
+  languageButton?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    languageDropdown?.classList.toggle("hidden");
+
+    mobileMenu?.classList.add("hidden");
+
+    const isExpanded = !languageDropdown?.classList.contains("hidden");
+    languageButton.setAttribute("aria-expanded", isExpanded.toString());
   });
 
   const mobileLinks = mobileMenu?.querySelectorAll("a");
@@ -153,11 +171,22 @@ const navItems = [
     const target = e.target as HTMLElement;
 
     if (
-      !mobileMenu?.classList.contains("hidden") &&
-      !mobileMenu?.contains(target) &&
-      !menuBtn?.contains(target)
+      mobileMenu &&
+      !mobileMenu.classList.contains("hidden") &&
+      !mobileMenu.contains(target) &&
+      !menuButton?.contains(target)
     ) {
-      mobileMenu?.classList.add("hidden");
+      mobileMenu.classList.add("hidden");
+    }
+
+    if (
+      languageDropdown &&
+      !languageDropdown.classList.contains("hidden") &&
+      !languageDropdown.contains(target) &&
+      !languageButton?.contains(target)
+    ) {
+      languageDropdown.classList.add("hidden");
+      languageButton?.setAttribute("aria-expanded", "false");
     }
   });
 </script>
