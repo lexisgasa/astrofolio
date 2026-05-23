@@ -1,6 +1,4 @@
 ---
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
 import { ui } from "../I18N/ui";
 import "../styles/global.css";
 
@@ -23,26 +21,16 @@ const { title, lang } = Astro.props;
     <title>{title}</title>
 
     <script is:inline>
-      if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
+      if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
         document.documentElement.classList.add("dark");
       } else {
         document.documentElement.classList.remove("dark");
       }
     </script>
   </head>
-  <body
-    class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 flex flex-col min-h-screen"
-  >
-    <Navbar lang={lang} />
-
+  <body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 flex flex-col min-h-screen">
     <main class="w-full grow">
       <slot />
     </main>
-
-    <Footer lang={lang} />
   </body>
 </html>

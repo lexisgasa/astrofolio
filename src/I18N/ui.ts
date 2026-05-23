@@ -15,7 +15,7 @@ export const ui = {
     "nav.contact": "Contacto",
     "hero.title": "Hola, soy",
     "hero.subtitle":
-      "Ingeniero de Software especializado en Frontend. Creo experiencias digitales fluidas, accesibles y minimalistas.",
+      "Ingeniero de Software especializado en arquitectura frontend y ecosistemas modernos de TypeScript. Construyo aplicaciones web escalables y estrategias de testing robustas.",
     "hero.cv": "Descargar CV",
     "hero.contact": "Contactar",
     "hero.imageAlt": "Foto de perfil de Alexis Garcia",
@@ -26,7 +26,7 @@ export const ui = {
     "projects.demo": "Demo",
     "contact.title": "Hablemos",
     "contact.text":
-      "Estoy siempre abierto a discutir nuevos proyectos, ideas creativas u oportunidades de ser parte de tus visiones.",
+      "Estoy siempre abierto a discutir nuevos proyectos, resolver desafíos de arquitectura o explorar oportunidades para crear software de alta calidad.",
     "contact.btn": "Envíame un mensaje",
     "footer.rights": "Todos los derechos reservados.",
   },
@@ -38,7 +38,7 @@ export const ui = {
     "nav.contact": "Contact",
     "hero.title": "Hi, I am",
     "hero.subtitle":
-      "Software Engineer specialized in Frontend. I build fluid, accessible, and minimalist digital experiences.",
+      "Software Engineer specialized in frontend architecture and modern TypeScript ecosystems. I build scalable web applications and robust testing strategies.",
     "hero.cv": "Download Resume",
     "hero.contact": "Contact Me",
     "hero.imageAlt": "Alexis Garcia Profile Picture",
@@ -49,7 +49,7 @@ export const ui = {
     "projects.demo": "Demo",
     "contact.title": "Let's Talk",
     "contact.text":
-      "I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
+      "I am always open to discussing new projects, solving architectural challenges, or exploring opportunities to build high-quality software.",
     "contact.btn": "Send me a message",
     "footer.rights": "All rights reserved.",
   },
@@ -61,7 +61,7 @@ export const ui = {
     "nav.contact": "お問い合わせ",
     "hero.title": "こんにちは、",
     "hero.subtitle":
-      "フロントエンド専門のソフトウェアエンジニアです。流動的でアクセシブル、かつミニマルなデジタル体験を創造します。",
+      "フロントエンドアーキテクチャとモダンなTypeScriptエコシステムを専門とするソフトウェアエンジニア。スケーラブルなWebアプリケーションと堅牢なテスト戦略を構築します。",
     "hero.cv": "履歴書をダウンロード",
     "hero.contact": "お問い合わせ",
     "hero.imageAlt": "アレクシス・ガルシアのプロフィール写真",
@@ -72,7 +72,7 @@ export const ui = {
     "projects.demo": "デモ",
     "contact.title": "お問い合わせ",
     "contact.text":
-      "新しいプロジェクトや創造的なアイデア、ビジョンの実現に向けた協力について、いつでもご相談ください。",
+      "新しいプロジェクト、アーキテクチャの課題解決、高品質なソフトウェア開発の機会について、いつでもご相談をお待ちしております。",
     "contact.btn": "メッセージを送る",
     "footer.rights": "全著作権所有.",
   },

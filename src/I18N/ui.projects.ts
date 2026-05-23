@@ -1,78 +1,78 @@
 export const projectsData = {
   es: [
     {
-      title: "Portfolio v1",
+      title: "Portfolio Web & CV",
       description:
-        "Mi primer portfolio profesional creado con Astro y Tailwind CSS. Incluye modo oscuro, i18n y diseño totalmente responsive.",
+        "Portfolio personal de alto rendimiento creado con Astro y Tailwind CSS. Incluye soporte multi-idioma (i18n), diseño responsive y modo oscuro.",
       tags: ["Astro", "Tailwind", "TypeScript"],
       link: "#",
       github: "#",
     },
     {
-      title: "E-commerce Dashboard",
+      title: "React Performance Dashboard",
       description:
-        "Panel de administración para una tienda online. Permite gestión de productos, visualización de ventas en tiempo real y control de usuarios.",
-      tags: ["React", "Node.js", "MongoDB", "Chart.js"],
+        "Panel interactivo que aplica técnicas avanzadas de renderizado y gestión de estado. Inspirado en los patrones del libro 'Advanced React' para optimizar el ciclo de vida de los componentes.",
+      tags: ["React", "TypeScript", "Vite"],
       link: "#",
       github: "#",
     },
     {
-      title: "Task Manager App",
+      title: "Vue Task Manager",
       description:
-        "Aplicación de gestión de tareas tipo Trello con funcionalidad de arrastrar y soltar (Drag & Drop).",
-      tags: ["Vue.js", "Firebase", "Pinia"],
+        "Aplicación de gestión de tareas tipo Kanban con funcionalidad Drag & Drop, demostrando el manejo profundo de la reactividad y el estado global.",
+      tags: ["Vue.js", "Pinia", "Firebase"],
       link: "#",
       github: "#",
     },
   ],
   en: [
     {
-      title: "Portfolio v1",
+      title: "Web Portfolio & CV",
       description:
-        "My first professional portfolio created with Astro and Tailwind CSS. Includes dark mode, i18n, and fully responsive design.",
+        "High-performance personal portfolio created with Astro and Tailwind CSS. Includes multi-language support (i18n), responsive design, and dark mode.",
       tags: ["Astro", "Tailwind", "TypeScript"],
       link: "#",
       github: "#",
     },
     {
-      title: "E-commerce Dashboard",
+      title: "React Performance Dashboard",
       description:
-        "Admin dashboard for an online store. Features product management, real-time sales visualization, and user control.",
-      tags: ["React", "Node.js", "MongoDB", "Chart.js"],
+        "Interactive dashboard applying advanced rendering and state management techniques. Inspired by 'Advanced React' patterns to optimize component lifecycles and avoid unnecessary re-renders.",
+      tags: ["React", "TypeScript", "Vite"],
       link: "#",
       github: "#",
     },
     {
-      title: "Task Manager App",
+      title: "Vue Task Manager",
       description:
-        "Trello-style task management application with Drag & Drop functionality.",
-      tags: ["Vue.js", "Firebase", "Pinia"],
+        "Kanban-style task management application with Drag & Drop functionality, demonstrating deep understanding of reactivity and global state management.",
+      tags: ["Vue.js", "Pinia", "Firebase"],
       link: "#",
       github: "#",
     },
   ],
   ja: [
     {
-      title: "ポートフォリオ v1",
+      title: "WebポートフォリオとCV",
       description:
-        "AstroとTailwind CSSで作成した初のプロフェッショナルポートフォリオ。ダークモード、多言語対応、完全レスポンシブデザインを含みます。",
+        "AstroとTailwind CSSで作成された高性能な個人ポートフォリオ。多言語対応（i18n）、レスポンシブデザイン、ダークモードを実装しています。",
       tags: ["Astro", "Tailwind", "TypeScript"],
       link: "#",
       github: "#",
     },
     {
-      title: "Eコマースダッシュボード",
+      title: "Reactパフォーマンスダッシュボード",
       description:
-        "オンラインストアの管理パネル。商品管理、リアルタイムの売上可視化、ユーザー管理が可能です。",
-      tags: ["React", "Node.js", "MongoDB", "Chart.js"],
+        "高度なレンダリングと状態管理技術を適用したインタラクティブなダッシュボード。「Advanced React」のパターンを活用し、コンポーネントのライフサイクルを最適化しています。",
+      tags: ["React", "TypeScript", "Vite"],
       link: "#",
       github: "#",
     },
     {
-      title: "タスク管理アプリ",
+      title: "Vueタスクマネージャー",
       description:
-        "ドラッグ＆ドロップ機能を備えたTrelloスタイルのタスク管理アプリケーション。",
-      tags: ["Vue.js", "Firebase", "Pinia"],
+        "ドラッグ＆ドロップ機能を備えたカンバンスタイルのタスク管理アプリケーション。リアクティビティとグローバルな状態管理への深い理解を示しています。",
+      tags: ["Vue.js", "Pinia", "Firebase"],
       link: "#",
       github: "#",
     },
