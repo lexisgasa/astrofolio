@@ -1,68 +1,86 @@
 export const skillsData = {
   es: [
     {
-      category: "Frontend",
+      category: "Frontend & Testing",
       items: [
-        "HTML5",
-        "CSS3",
         "JavaScript",
         "TypeScript",
         "React",
+        "Vue.js",
+        "Next.js",
         "Astro",
         "Tailwind CSS",
+        "Jest & Testing Library",
+        "Redux / Zustand",
       ],
     },
     {
       category: "Backend & Base de datos",
-      items: ["Node.js", "Express", "MongoDB", "SQL"],
+      items: ["Node.js", "Express", "Python", "FastAPI", "GraphQL", "MongoDB", "RESTful APIs"],
     },
     {
-      category: "Herramientas & Otros",
-      items: ["Git / GitHub", "Docker", "Figma", "Scrum / Agile"],
+      category: "DevOps & Herramientas",
+      items: ["Docker", "GitHub Actions", "CI/CD", "SonarQube", "Husky", "Vite", "Figma", "Jira / Scrum"],
+    },
+    {
+      category: "Seguridad & Arquitectura",
+      items: ["OAuth / SSO", "Event-Driven Design", "RBAC", "Gestión de Sesiones", "Prevención XSS/CSRF"],
     },
   ],
   en: [
     {
-      category: "Frontend",
+      category: "Frontend & Testing",
       items: [
-        "HTML5",
-        "CSS3",
         "JavaScript",
         "TypeScript",
         "React",
+        "Vue.js",
+        "Next.js",
         "Astro",
         "Tailwind CSS",
+        "Jest & Testing Library",
+        "Redux / Zustand",
       ],
     },
     {
       category: "Backend & Database",
-      items: ["Node.js", "Express", "MongoDB", "SQL"],
+      items: ["Node.js", "Express", "Python", "FastAPI", "GraphQL", "MongoDB", "RESTful APIs"],
     },
     {
-      category: "Tools & Others",
-      items: ["Git / GitHub", "Docker", "Figma", "Scrum / Agile"],
+      category: "DevOps & Tools",
+      items: ["Docker", "GitHub Actions", "CI/CD", "SonarQube", "Husky", "Vite", "Figma", "Jira / Scrum"],
+    },
+    {
+      category: "Security & Architecture",
+      items: ["OAuth / SSO", "Event-Driven Design", "RBAC", "Session Management", "XSS/CSRF Prevention"],
     },
   ],
   ja: [
     {
-      category: "フロントエンド", // Frontend
+      category: "フロントエンド & テスト",
       items: [
-        "HTML5",
-        "CSS3",
         "JavaScript",
         "TypeScript",
         "React",
+        "Vue.js",
+        "Next.js",
         "Astro",
         "Tailwind CSS",
+        "Jest & Testing Library",
+        "Redux / Zustand",
       ],
     },
     {
-      category: "バックエンド & データベース", // Backend & Database
-      items: ["Node.js", "Express", "MongoDB", "SQL"],
+      category: "バックエンド & データベース",
+      items: ["Node.js", "Express", "Python", "FastAPI", "GraphQL", "MongoDB", "RESTful APIs"],
     },
     {
-      category: "ツール & その他", // Tools & Others
-      items: ["Git / GitHub", "Docker", "Figma", "Scrum / Agile"],
+      category: "DevOps & ツール",
+      items: ["Docker", "GitHub Actions", "CI/CD", "SonarQube", "Husky", "Vite", "Figma", "Jira / Scrum"],
+    },
+    {
+      category: "セキュリティ & アーキテクチャ",
+      items: ["OAuth / SSO", "Event-Driven Design", "RBAC", "セッション管理", "XSS/CSRF 対策"],
     },
   ],
 };
