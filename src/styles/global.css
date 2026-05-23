@@ -29,7 +29,27 @@
   }
 
   .card {
-    @apply bg-white dark:bg-slate-800 rounded-lg p-6 shadow-md border border-slate-200 dark:border-slate-700 transition hover:shadow-lg hover:-translate-y-1;
+    @apply bg-white dark:bg-slate-800 rounded-lg p-6 shadow-md border border-slate-200 dark:border-slate-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .card-title {
+    @apply text-xl font-bold text-slate-900 dark:text-white leading-tight;
+  }
+
+  .card-meta {
+    @apply text-sm font-medium text-blue-600 dark:text-blue-400 block;
+  }
+
+  .card-badge {
+    @apply text-xs font-medium px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300;
+  }
+
+  .card-footer {
+    @apply flex items-center gap-4 mt-auto pt-4 border-t border-slate-100 dark:border-slate-700;
+  }
+
+  .card-link {
+    @apply flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition;
   }
 
   .tag {

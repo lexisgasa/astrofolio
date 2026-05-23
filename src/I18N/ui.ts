@@ -24,6 +24,7 @@ export const ui = {
     "projects.title": "Proyectos Destacados",
     "projects.code": "Código",
     "projects.demo": "Demo",
+    "notes.title": "Notas de Arquitectura",
     "contact.title": "Hablemos",
     "contact.text":
       "Estoy siempre abierto a discutir nuevos proyectos, resolver desafíos de arquitectura o explorar oportunidades para crear software de alta calidad.",
@@ -47,6 +48,7 @@ export const ui = {
     "projects.title": "Featured Projects",
     "projects.code": "Code",
     "projects.demo": "Demo",
+    "notes.title": "Architecture & Tech Notes",
     "contact.title": "Let's Talk",
     "contact.text":
       "I am always open to discussing new projects, solving architectural challenges, or exploring opportunities to build high-quality software.",
@@ -73,6 +75,7 @@ export const ui = {
     "contact.title": "お問い合わせ",
     "contact.text":
       "新しいプロジェクト、アーキテクチャの課題解決、高品質なソフトウェア開発の機会について、いつでもご相談をお待ちしております。",
+    "notes.title": "アーキテクチャ＆技術ノート",
     "contact.btn": "メッセージを送る",
     "footer.rights": "全著作権所有.",
   },

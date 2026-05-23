@@ -1,0 +1,39 @@
+---
+import { useTranslations } from "../I18N/utils";
+import { ui } from "../I18N/ui";
+import { notesData } from "../I18N/ui.notes";
+
+interface Props {
+  lang: keyof typeof ui;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const notes = notesData[lang] || notesData.es;
+---
+
+<section id="notas" class="pb-20 bg-slate-50 dark:bg-slate-900/50">
+  <div class="wrapper">
+    <h2 class="section-title">{t("notes.title")}</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+      {
+        notes.map((note) => (
+          <article class="card flex flex-col h-full">
+            <span class="card-meta mb-3">{note.date}</span>
+
+            <h3 class="card-title mb-3">{note.title}</h3>
+
+            <p class="text-muted text-sm mb-6 leading-relaxed grow">{note.excerpt}</p>
+
+            <div class="flex flex-wrap gap-2 mt-auto">
+              {note.tags.map((tag) => (
+                <span class="card-badge">{tag}</span>
+              ))}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
